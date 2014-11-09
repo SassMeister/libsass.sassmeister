@@ -1,0 +1,111 @@
+{
+  "Bitters": {
+    "fingerprint": "(bitters|bitters/.*)",
+    "imports": [
+      "bourbon/bourbon",
+      "neat/neat",
+      "bitters/bitters"
+    ],
+    "paths": [],
+    "url": "http://bitters.bourbon.io"
+  },
+  "Bourbon": {
+    "fingerprint": "(bourbon|bourbon/.*)",
+    "imports": [
+      "bourbon/bourbon"
+    ],
+    "paths": [],
+    "url": "http://bourbon.io/"
+  },
+  "compass-mixins": {
+    "fingerprint": "compass-mixins",
+    "imports": [
+      "compass-mixins"
+    ],
+    "paths": [
+      "compass-mixins/lib"  
+    ],
+    "url": "https://github.com/Igosuki/compass-mixins"
+  },
+  "Foundation": {
+    "fingerprint": "(foundation|foundation\/.*)",
+    "imports": [
+      "foundation"
+    ],
+    "paths": [
+      "foundation/scss"
+    ],
+    "url": "http://foundation.zurb.com/"
+  },
+  "Garnish": {
+    "fingerprint": "garnish",
+    "imports": [
+      "garnish"
+    ],
+    "paths": [
+      "garnish/src"
+    ],
+    "url": "https://github.com/paulozoom/garnish"
+  },
+  "Guff": {
+    "fingerprint": "guff",
+    "imports": [
+      "guff"
+    ],
+    "paths": [
+      "guff"
+    ],
+    "url": "https://github.com/kenwheeler/guff/"
+  },
+  "MathSass": {
+    "fingerprint": "math",
+    "imports": [
+      "math"
+    ],
+    "paths": [
+      "mathsass/dist"
+    ],
+    "url": "https://github.com/terkel/mathsass"
+  },
+  "Modular Scale": {
+    "fingerprint": "modular-scale",
+    "imports": [
+      "modular-scale"
+    ],
+    "paths": [
+      "modular-scale/stylesheets"
+    ],
+    "url": "https://github.com/Team-Sass/modular-scale"
+  },
+  "Neat": {
+    "fingerprint": "(neat|neat/.*)",
+    "imports": [
+      "bourbon/bourbon",
+      "neat/neat"
+    ],
+    "paths": [],
+    "url": "http://neat.bourbon.io"
+  },
+  "Sass List–Maps": {
+    "fingerprint": "sass-list-maps",
+    "imports": [
+      "sass-list-maps"
+    ],
+    "paths": [
+      "sass-list-maps"
+    ],
+    "url": "https://github.com/lunelson/sass-list-maps"
+  },
+  "Sass Color Helpers": {
+    "fingerprint": [
+      "color-helpers"
+    ],
+    "imports": [
+      "color-helpers"
+    ],
+    "paths": [
+      "sass-color-helpers/stylesheets"
+    ],
+    "url": "https://github.com/voxpelli/sass-color-helpers"
+  }
+}

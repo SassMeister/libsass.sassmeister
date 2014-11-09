@@ -1,0 +1,23 @@
+{
+  "name": "libsass2",
+  "version": "1.0.0",
+  "description": "A service app that supports SassMeister.com",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha"
+  },
+  "author": "Jed Foster <jed@jedfoster.com>",
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "config": "^1.8.1",
+    "ejs": "^1.0.0",
+    "express": "^4.10.2",
+    "newrelic": "^1.13.3",
+    "node-sass": "^1.2.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1",
+    "supertest": "^0.15.0"
+  }
+}
