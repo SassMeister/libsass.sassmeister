@@ -75,10 +75,6 @@ if (cluster.isMaster) {
   };
 
 
-  // views as directory for all template files
-  app.set('views', path.join(__dirname, 'views'));
-  app.set('view engine', 'ejs');
-
   // instruct express to server up static assets
   app.use(express.static('public'));
   
@@ -95,12 +91,6 @@ if (cluster.isMaster) {
     }
 
     next();
-  });
-
-
-  // Set up site routes
-  app.get('/', function(req, res) {
-    res.render('index');
   });
 
 
