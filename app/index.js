@@ -76,7 +76,7 @@ if (cluster.isMaster) {
 
 
   // instruct express to server up static assets
-  app.use(express.static('public'));
+  app.use(express.static('public', { maxAge: 2592000000 }));
   
   app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -127,28 +127,9 @@ if (cluster.isMaster) {
 
 
   app.get('/extensions', function(req, res) {
-    res.set('Last-Modified', (new Date(fs.statSync('config/plugins.json').mtime)).toUTCString());
-
-    if(req.fresh) {
-      res.send(304);
-
-    } else {
-      var extensions = {}
-
-      for(extension in sassModules) {
-        extensions[extension] = {
-          import: sassModules[extension].imports
-        }
-      }
-
-      res.set({
-        'Cache-Control': 'public, max-age=2592000',
-        'Content-Type': 'application/json'
-      });
-
-      res.end(JSON.stringify(extensions));
-    }
+    res.sendFile('extensions.json', {root: __dirname + '/../public/', maxAge: 2592000000});
   });
+
 
   // Heroku defines the port in an environment variable.
   // Our app should use that if defined, otherwise 3000 is a pretty good default.
