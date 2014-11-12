@@ -2,14 +2,19 @@ var gulp = require('gulp'),
     bower = require('bower'),
     fs = require('fs'),
     sassModules = require('config').plugins,
-    _ = require('lodash');
+    _ = require('lodash'),
+    bowerDependencies = _.keys(require('./bower.json').dependencies),
+    bowerInfo = function(pkg, callback) {
+      bower.commands.info(pkg)
+        .on('end', function (res) {
+          callback(res.latest);
+        });
+    };
 
-function list() {
+function bowerListAndInstall() {
   var extensions = [],
       length = _.size(sassModules),
       i = 0;
-
-  var bowerDependencies = _.keys(require('./bower.json').dependencies);
 
   _.each(sassModules, function(extension, key) {
     if(! _.contains(bowerDependencies, extension.bower)) {
@@ -27,16 +32,10 @@ function list() {
   });
 }
 
-function update() {
+function writeExtensionsJSON() {
   var extensions = sassModules,
       length = _.size(sassModules),
-      i = 0,
-      bowerInfo = function(pkg, callback) {
-        bower.commands.info(pkg)
-          .on('end', function (res) {
-            callback(res.latest);
-          });
-      };
+      i = 0;
 
   _.each(sassModules, function(extension, key) {
     bowerInfo(extension.bower, function(info) {
@@ -55,14 +54,33 @@ function update() {
   });
 }
 
+function fixturePreflightCheck() {
+  var extensions = sassModules,
+      length = _.size(sassModules),
+      i = 0;
+
+  _.each(sassModules, function(extension, key) {
+    var fixture = 'test/fixtures/' + key + '.scss';
+
+    var exists = fs.existsSync(fixture)
+    if(! exists) {
+      fs.writeFileSync(fixture, '');
+      throw 'Populate this new spec fixture before continuing: ' + fixture;
+    }    
+  });
+}
+
 
 gulp.task('list', function() {
-  return list();
+  return bowerListAndInstall();
 });
 
-
 gulp.task('update', function() {
-  return update();
+  return writeExtensionsJSON();
+});
+
+gulp.task('testPreflight', function() {
+  return fixturePreflightCheck();
 });
 
 // The default task (called when you run `gulp` from cli)
