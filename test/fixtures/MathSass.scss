@@ -1,0 +1,6 @@
+@import 'math';
+
+.test {
+  pi: $PI;
+  font-size: fact(4);
+}

@@ -1,0 +1,6 @@
+@import "garnish";
+
+.mint {
+  color: #4183C4;
+  @include hover { color: #333333; }
+}

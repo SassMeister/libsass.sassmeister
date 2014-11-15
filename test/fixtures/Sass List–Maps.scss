@@ -1,0 +1,9 @@
+@import "sass-list-maps";
+$list-map: ( alpha 1, beta 2, gamma 3 );
+.demo {
+  out: map-keys($list-map); //-> alpha, beta, gamma
+  out: map-values($list-map); //-> 1, 2, 3
+  out: map-has-key($list-map, gamma); //-> true
+  out: map-has-key($list-map, delta); //-> false
+}
+

@@ -1,0 +1,6 @@
+@import 'color-helpers';
+
+.elem1 {
+  opacity: calculateAlpha(#000, #5e534f, #16110e);
+  background: calculateTopColor(0.8, #947e70, #7a7572);
+}
