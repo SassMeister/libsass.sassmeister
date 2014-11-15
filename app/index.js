@@ -42,16 +42,6 @@ var setIncludePaths = function(imports) {
   return paths;
 };
 
-var sassCompile = function(sass, outputStyle) {
-  var includePaths = setIncludePaths(extractImports(sass));
-
-  return nodeSass.renderSync({
-    data: sass,
-    outputStyle: outputStyle,
-    includePaths: includePaths
-  });
-};
-
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 
@@ -82,33 +72,38 @@ app.get('/', function(req, res) {
 
 
 app.post('/compile', function(req, res) {
-  var css = '',
-      sass = req.body.input,
+  var sass = req.body.input,
       outputStyle = req.body.output_style,
-      time = new Date;
+      includePaths = setIncludePaths(extractImports(sass)),
+      stats = {};
 
-  try {
-    if(req.body.syntax == 'sass') {
-      console.log('Converting...');
-      var convert = require('../sass_modules/sass2scss');
+  if(req.body.syntax == 'sass') {
+    console.log('Converting...');
+    var convert = require('../sass_modules/sass2scss');
 
-      sass = convert.sass2scss(sass);
-    }
-
-    css = sassCompile(sass, outputStyle)
-  }
-  catch(e) {
-    css = e.toString();
+    sass = convert.sass2scss(sass);
   }
 
-  time = (new Date - time) / 1000;
+  nodeSass.render({
+    data: sass + ' ',
+    outputStyle: outputStyle,
+    stats: stats,
+    includePaths: includePaths,
 
-  res.json({
-    css: css,
-    dependencies: {
-      'libsass': '3.0.2'
+    success: function(css) {
+      res.json({
+        css: css,
+        dependencies: {
+          'libsass': '3.0.2'
+        },
+        stats: stats.duration / 1000,
+        time: stats.duration / 1000
+      });
     },
-    time: time
+
+    error: function(error) {
+      res.status(500).send(error);
+    }
   });
 });
 
