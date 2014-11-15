@@ -1,4 +1,3 @@
-// set variables for environment
 var express = require('express'),
     app = module.exports = express(),
     bodyParser = require('body-parser'),
@@ -42,27 +41,11 @@ var setIncludePaths = function(imports) {
   return paths;
 };
 
+
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
-
-// instruct express to server up static assets
 app.use(express.static('public', { maxAge: 2592000000 }));
-
 app.use(bodyParser.json());
-
-
-app.use(function (req, res, next) {
-  next();
-});
-
-
-app.all('*', function(req, res, next) {
-  if(req.get('origin') && req.get('origin').match(/^http:\/\/(.+\.){0,1}sassmeister\.(com|dev|([\d+\.]{4}xip\.io))/)) {
-    res.set('Access-Control-Allow-Origin', req.get('origin'));
-  }
-
-  next();
-});
 
 
 // Set up site routes
@@ -78,8 +61,8 @@ app.post('/compile', function(req, res) {
       stats = {};
 
   if(req.body.syntax == 'sass') {
-    console.log('Converting...');
     var convert = require('../sass_modules/sass2scss');
+    console.log('Converting...');
 
     sass = convert.sass2scss(sass);
   }
