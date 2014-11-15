@@ -24,6 +24,7 @@
     "neat": "~1.7.0",
     "sass-color-helpers": "~2.0.0",
     "sass-list-maps": "~1.0.0",
-    "garnish": "~0.2.1"
+    "garnish": "~0.2.1",
+    "sass2scss": "ArnaudRinquin/sass2scss"
   }
 }
