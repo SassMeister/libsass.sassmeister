@@ -21,7 +21,7 @@ var extractImports = function(sass) {
 };
 
 var setIncludePaths = function(imports) {
-  var paths = ['import_shims/', 'sass_modules/'],
+  var paths = ['lib/sass_modules/', 'lib/sass_modules/vendor/'],
       fingerprint;
 
   for(i = 0; i < imports.length; i++) {
@@ -30,14 +30,14 @@ var setIncludePaths = function(imports) {
 
       if(imports[i].match(fingerprint)) {
         for(path in app.sassModules[module].paths) {
-          paths.push('sass_modules/' + app.sassModules[module].paths[path] + '/');
+          paths.push('lib/sass_modules/vendor/' + app.sassModules[module].paths[path] + '/');
         }
       }
     }
   }
 
-  paths= paths.filter(function (v, i, a) { return a.indexOf (v) == i }); // dedupe array
-
+  paths = paths.filter(function (v, i, a) { return a.indexOf (v) == i }); // dedupe array
+  
   return paths;
 };
 
@@ -61,7 +61,7 @@ app.post('/compile', function(req, res) {
       stats = {};
 
   if(req.body.syntax == 'sass') {
-    var convert = require('../sass_modules/sass2scss');
+    var convert = require('../lib/sass_modules/vendor/sass2scss');
     console.log('Converting...');
 
     sass = convert.sass2scss(sass);

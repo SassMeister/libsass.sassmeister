@@ -25,5 +25,5 @@ build/Release
 node_modules
 
 # Bower packages
-sass_modules
+lib/sass_modules/vendor
 
