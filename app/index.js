@@ -5,6 +5,9 @@ var express = require('express'),
 
 app.sassModules = require('config').plugins;
 
+const LIBSASS_VERSION = '3.0.2';
+const MAX_AGE = 2592000000;
+
 var extractImports = function(sass) {
   var imports = [],
       regex = /@import\s*[("']*([^;]+)[;)"']*/g;
@@ -42,13 +45,16 @@ var setIncludePaths = function(imports) {
 };
 
 
-app.use(express.static('public', { maxAge: 2592000000 }));
+app.use(express.static('public', { maxAge: MAX_AGE }));
 app.use(bodyParser.json());
 
 
 // Set up site routes
 app.get('/', function(req, res) {
-  res.render('index');
+  res.json({
+    sass: LIBSASS_VERSION,
+    engine: 'LibSass'
+  });
 });
 
 
@@ -75,7 +81,7 @@ app.post('/compile', function(req, res) {
       res.json({
         css: css,
         dependencies: {
-          'libsass': '3.0.2'
+          'libsass': LIBSASS_VERSION
         },
         stats: stats.duration / 1000,
         time: stats.duration / 1000
@@ -90,7 +96,7 @@ app.post('/compile', function(req, res) {
 
 
 app.get('/extensions', function(req, res) {
-  res.sendFile('extensions.json', {root: __dirname + '/../public/', maxAge: 2592000000});
+  res.sendFile('extensions.json', {root: __dirname + '/../public/', maxAge: MAX_AGE});
 });
 
 

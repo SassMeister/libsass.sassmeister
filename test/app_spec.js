@@ -4,7 +4,7 @@ var request = require('supertest'),
     app = require('../app');
 
 describe('GET /extensions', function() {
-  it('respond with json', function(done) {
+  it('responds with json', function(done) {
     request(app)
       .get('/extensions')
       .set('Accept', 'application/json')
@@ -16,9 +16,12 @@ describe('GET /extensions', function() {
 
 describe('Routes', function() {
   describe('GET /', function() {
-    it('responds OK', function(done) {
+    it('responds with JSON containing the compiler version', function(done) {
       request(app)
         .get('/')
+        .expect(function(res) {
+          if(res.body.engine != 'LibSass') throw new Error('expected JSON response to include "{\"engine\":\"LibSass\"}", got "' + JSON.stringify(res.body) + '"');
+        })
         .expect(200, done);
     });
   });
