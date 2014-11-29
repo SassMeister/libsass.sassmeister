@@ -42,8 +42,6 @@ var setIncludePaths = function(imports) {
 };
 
 
-app.set('view engine', 'jade');
-app.set('views', __dirname + '/views');
 app.use(express.static('public', { maxAge: 2592000000 }));
 app.use(bodyParser.json());
 
