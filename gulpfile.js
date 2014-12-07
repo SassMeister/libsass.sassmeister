@@ -72,6 +72,29 @@ function fixturePreflightCheck() {
   });
 }
 
+function setMetadata() {
+  var version = require('config').libsassVersion,
+      compiler = {
+        sass: version,
+        engine: 'LibSass'
+      },
+      redis = require('./lib/redis').redis,
+      extension_list = require('./public/extensions.json');
+
+  var compilers = redis('compilers');
+  compilers.merge({'lib': compiler});
+
+  var extensions = redis('extensions');
+
+  _.mapValues(extension_list, function(value, key) {
+    this[key]=_.omit(value, ['gem', 'bower', 'paths', 'fingerprint']);
+  }, extension_list);
+
+  extensions.merge(extension_list);
+
+  return true;
+}
+
 
 // gulp.task('list', function() {
 //   return bowerListAndInstall();
@@ -90,6 +113,17 @@ function fixturePreflightCheck() {
 //     .pipe(mocha())
 //     .pipe(exit());
 // });
+
+gulp.task('setMetadata', function() {
+  return setMetadata();
+});
+
+gulp.task('assets', ['setMetadata'], function() {
+  setTimeout(function() {
+    return gulp.src('', {read: false})
+      .pipe(exit());
+  }, 150);
+});
 
 
 // The default task (called when you run `gulp` from cli)
