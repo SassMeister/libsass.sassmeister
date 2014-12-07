@@ -5,7 +5,7 @@ var express = require('express'),
 
 app.sassModules = require('config').plugins;
 
-const LIBSASS_VERSION = '3.0.2';
+const LIBSASS_VERSION = require('config').libsassVersion;
 const MAX_AGE = 2592000000;
 
 var extractImports = function(sass) {
