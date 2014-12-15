@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     exit = require('gulp-exit'), // Because https://github.com/gulpjs/gulp/issues/411
-    mocha = require('gulp-mocha'),
     bower = require('bower'),
     fs = require('fs'),
     sassModules = require('config').plugins,
@@ -128,6 +127,7 @@ gulp.task('assets', ['setMetadata'], function() {
 
 // The default task (called when you run `gulp` from cli)
 gulp.task('default', function() {
+  var mocha = require('gulp-mocha');
 
   bowerListAndInstall();
 
