@@ -95,24 +95,6 @@ function setMetadata() {
 }
 
 
-// gulp.task('list', function() {
-//   return bowerListAndInstall();
-// });
-
-// gulp.task('update', function() {
-//   return writeExtensionsJSON();
-// });
-
-// gulp.task('testPreflight', function() {
-//   return fixturePreflightCheck();
-// });
-
-// gulp.task('test', ['testPreflight'], function () {
-//   return gulp.src('test/*.js', {read: false})
-//     .pipe(mocha())
-//     .pipe(exit());
-// });
-
 gulp.task('setMetadata', function() {
   return setMetadata();
 });
@@ -124,8 +106,6 @@ gulp.task('assets', ['setMetadata'], function() {
   }, 150);
 });
 
-
-// The default task (called when you run `gulp` from cli)
 gulp.task('default', function() {
   var mocha = require('gulp-mocha');
 
