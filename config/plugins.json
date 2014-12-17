@@ -105,5 +105,15 @@
     "paths": [
       "sass-color-helpers/stylesheets"
     ]
+  },
+  "Toolkit": {
+    "bower": "sass-toolkit",
+    "fingerprint": "toolkit",
+    "imports": [
+      "toolkit"
+    ],
+    "paths": [
+      "sass-toolkit/stylesheets"
+    ]
   }
 }

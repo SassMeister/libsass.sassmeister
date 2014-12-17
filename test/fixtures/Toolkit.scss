@@ -1,0 +1,5 @@
+@import "toolkit";
+
+.triangle {
+  @include triangle(#09f, 40px, 100px, 150);
+}

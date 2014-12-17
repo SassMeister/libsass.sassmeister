@@ -26,6 +26,7 @@
     "sass-list-maps": "~1.0.0",
     "garnish": "~0.2.1",
     "sass2scss": "ArnaudRinquin/sass2scss",
-    "breakpoint": "~4.6.4"
+    "breakpoint": "~4.6.4",
+    "sass-toolkit": "~2.6.0"
   }
 }
