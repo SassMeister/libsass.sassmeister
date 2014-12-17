@@ -1,4 +1,12 @@
 {
+  "Bourbon": {
+    "bower": "bourbon",
+    "fingerprint": "(bourbon|bourbon/.*)",
+    "imports": [
+      "bourbon/bourbon"
+    ],
+    "paths": []
+  },
   "Breakpoint": {
     "bower": "breakpoint",
     "fingerprint": "breakpoint",
@@ -8,14 +16,6 @@
     "paths": [
       "breakpoint/stylesheets"
     ]
-  },
-  "Bourbon": {
-    "bower": "bourbon",
-    "fingerprint": "(bourbon|bourbon/.*)",
-    "imports": [
-      "bourbon/bourbon"
-    ],
-    "paths": []
   },
   "compass-mixins": {
     "bower": "compass-mixins",
@@ -114,6 +114,16 @@
     ],
     "paths": [
       "sass-toolkit/stylesheets"
+    ]
+  },
+  "Singularity.gs": {
+    "bower": "singularity",
+    "fingerprint": "singularity",
+    "imports": [
+      "singularity"
+    ],
+    "paths": [
+      "singularity/stylesheets"
     ]
   }
 }
