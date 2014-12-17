@@ -1,4 +1,14 @@
 {
+  "Breakpoint": {
+    "bower": "breakpoint",
+    "fingerprint": "breakpoint",
+    "imports": [
+      "breakpoint"
+    ],
+    "paths": [
+      "breakpoint/breakpoint"
+    ]
+  },
   "Bourbon": {
     "bower": "bourbon",
     "fingerprint": "(bourbon|bourbon/.*)",
