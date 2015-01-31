@@ -88,7 +88,7 @@ app.post('/compile', function(req, res) {
     },
 
     error: function(error) {
-      res.status(500).send(error.message);
+      res.status(500).json(error);
     }
   });
 });
