@@ -6,7 +6,7 @@
       "breakpoint"
     ],
     "paths": [
-      "breakpoint/breakpoint"
+      "breakpoint/stylesheets"
     ]
   },
   "Bourbon": {

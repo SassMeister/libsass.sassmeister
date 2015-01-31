@@ -1,2 +1,17 @@
 @import "breakpoint";
 
+$basic: 543px;
+$pair: 456px 794px;
+
+#foo {
+  content: 'No Media Queries';
+
+  @include breakpoint($basic) {
+    content: 'Basic Media Query';
+  }
+
+  @include breakpoint($pair) {
+    content: 'Paired Media Query';
+  }
+}
+
