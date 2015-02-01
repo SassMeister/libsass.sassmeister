@@ -57,6 +57,16 @@
       "guff"
     ]
   },
+  "Juice": {
+    "bower": "juice",
+    "fingerprint": "juice",
+    "imports": [
+      "juice"
+    ],
+    "paths": [
+      "juice/dist"
+    ]
+  },
   "MathSass": {
     "bower": "mathsass",
     "fingerprint": "math",

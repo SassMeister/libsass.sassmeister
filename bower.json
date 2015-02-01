@@ -28,6 +28,7 @@
     "sass2scss": "ArnaudRinquin/sass2scss",
     "breakpoint": "https://github.com/at-import/breakpoint.git",
     "sass-toolkit": "~2.6.0",
-    "singularity": "~1.4.0"
+    "singularity": "~1.4.0",
+    "juice": "~1.0.0"
   }
 }

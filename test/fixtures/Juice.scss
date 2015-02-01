@@ -1,0 +1,8 @@
+@import 'juice';
+
+.element {
+  @include bp(480px,1024px) {
+    color: black;
+  }
+}
+
