@@ -27,6 +27,16 @@
       "breakpoint/stylesheets"
     ]
   },
+  "ColorMeSass": {
+    "bower": "color-me-sass",
+    "fingerprint": "color-me-sass",
+    "imports": [
+      "color-me-sass"
+    ],
+    "paths": [
+      "color-me-sass"
+    ]
+  },
   "compass-mixins": {
     "bower": "compass-mixins",
     "fingerprint": "compass-mixins",

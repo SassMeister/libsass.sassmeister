@@ -31,6 +31,7 @@
     "singularity": "~1.4.0",
     "juice": "~1.0.0",
     "box": "~0.1.2",
-    "jeet": "~6.1.2"
+    "jeet": "~6.1.2",
+    "color-me-sass": "https://github.com/RichardBray/color-me-sass.git"
   }
 }

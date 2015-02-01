@@ -1,0 +1,14 @@
+@import 'color-me-sass';
+
+
+/*  LIGHTEN  */     
+
+body{
+  background-color: lighten($yellowDark, 25%);
+}
+
+/*  DARKEN  */
+
+body{
+  background-color: darken($pinkCoral, 76%);
+}
