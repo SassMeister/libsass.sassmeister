@@ -7,6 +7,16 @@
     ],
     "paths": []
   },
+  "Box": {
+    "bower": "box",
+    "fingerprint": "box",
+    "imports": [
+      "box"
+    ],
+    "paths": [
+      "box/sass"
+    ]
+  },
   "Breakpoint": {
     "bower": "breakpoint",
     "fingerprint": "breakpoint",

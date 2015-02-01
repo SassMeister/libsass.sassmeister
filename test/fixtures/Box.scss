@@ -1,0 +1,35 @@
+@import 'box';
+
+// Define a map of units
+$custom-units-map: (
+  hairline: 1px,
+  single: 10px,
+  double: 20px,
+  triple: 30px,
+  quadruple: 40px,
+  half: 5px,
+  third: 3.33333333px
+);
+
+// Override
+@function box-parse-value-filter($key, $orientation){
+  @if map-has-key($custom-units-map, $key) {
+    @return map-get($custom-units-map, $key);
+  } @else {
+    // If it isn't recognised throw an error
+    // Unfortunately Sass doesn't allow us to call super.
+    @return box-throw-error($box-invalid-value-error, "Invalid value #{$key}");
+  }
+}
+
+// Then you can use
+
+.Example {
+  @include box(
+    (
+      padding: single,
+      margin-bottom: double,
+      border: hairline
+    )
+  );
+}
