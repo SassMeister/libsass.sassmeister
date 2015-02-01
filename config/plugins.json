@@ -67,6 +67,16 @@
       "guff"
     ]
   },
+  "Jeet": {
+    "bower": "jeet",
+    "fingerprint": "jeet",
+    "imports": [
+      "jeet/index"
+    ],
+    "paths": [
+      "jeet/scss"
+    ]
+  },
   "Juice": {
     "bower": "juice",
     "fingerprint": "juice",
