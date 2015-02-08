@@ -28,7 +28,7 @@
     ]
   },
   "ColorMeSass": {
-    "bower": "color-me-sass",
+    "bower": "RichardBray/color-me-sass",
     "fingerprint": "color-me-sass",
     "imports": [
       "color-me-sass"

@@ -32,7 +32,7 @@
     "juice": "~1.0.0",
     "box": "~0.1.2",
     "jeet": "~6.1.2",
-    "color-me-sass": "https://github.com/RichardBray/color-me-sass.git",
+    "color-me-sass": "RichardBray/color-me-sass",
     "include-media": "~1.1.2"
   }
 }
