@@ -1,0 +1,5 @@
+@import "susy";
+
+.ag1 { @include span(2); }
+.ag4 { @include span(3); }
+

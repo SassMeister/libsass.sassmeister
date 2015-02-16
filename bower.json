@@ -33,6 +33,7 @@
     "box": "~0.1.2",
     "jeet": "~6.1.2",
     "color-me-sass": "RichardBray/color-me-sass",
-    "include-media": "~1.1.2"
+    "include-media": "~1.1.2",
+    "susy": "~2.2.2"
   }
 }
