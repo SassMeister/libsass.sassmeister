@@ -107,6 +107,14 @@ gulp.task('assets', ['setMetadata'], function() {
   }, 150);
 });
 
+gulp.task('update', function() {
+  bowerListAndInstall();
+
+  writeExtensionsJSON();
+
+  return;
+});
+
 gulp.task('default', function() {
   var mocha = require('gulp-mocha');
 
