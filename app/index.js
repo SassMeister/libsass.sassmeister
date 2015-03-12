@@ -5,7 +5,7 @@ var express = require('express'),
 
 app.sassModules = require('config').plugins;
 
-const LIBSASS_VERSION = nodeSass.info().match(/(?:libsass version:\s+)([\w\d\.-]+)$/i)[1];
+const LIBSASS_VERSION = nodeSass.info.match(/(?:libsass\s+)([\w\d\.-]+)/i)[1];
 const MAX_AGE = 2592000000;
 
 var extractImports = function(sass) {
@@ -74,21 +74,18 @@ app.post('/compile', function(req, res) {
   nodeSass.render({
     data: sass + ' ',
     outputStyle: outputStyle,
-    includePaths: includePaths,
-
-    success: function(result) {
-      res.json({
-        css: result.css,
-        dependencies: {
-          'libsass': LIBSASS_VERSION
-        },
+    includePaths: includePaths
+  }, function(error, result) {
+    if (error) {
+      return res.status(500).json(error);
+    }
+    else {
+      return res.json({
+        css: result.css.toString(),
+        dependencies: { 'libsass': LIBSASS_VERSION },
         stats: result.stats.duration / 1000,
         time: result.stats.duration / 1000
-      });
-    },
-
-    error: function(error) {
-      res.status(500).json(error);
+      });      
     }
   });
 });
