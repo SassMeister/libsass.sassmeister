@@ -73,7 +73,7 @@ function fixturePreflightCheck() {
 
 function setMetadata() {
   var nodeSass = require('node-sass'),
-      version = nodeSass.info().match(/(?:libsass version:\s+)([\w\d\.-]+)$/i)[1],
+      version = nodeSass.info.match(/(?:libsass\s+)([\w\d\.-]+)/i)[1],
       compiler = {
         sass: version,
         engine: 'LibSass'
