@@ -77,7 +77,9 @@ app.post('/compile', function(req, res) {
     includePaths: includePaths
   }, function(error, result) {
     if (error) {
-      return res.status(500).json(error);
+      return res.status(500).json({
+        css: error.message + ' on line ' + error.line + ' at column ' + error.column
+      });
     }
     else {
       return res.json({

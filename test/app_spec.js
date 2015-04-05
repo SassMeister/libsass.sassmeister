@@ -39,9 +39,27 @@ describe('Routes', function() {
         .set('Content-Type', 'application/json')
         .expect('Content-Type', /json/)
         .expect(function(res) {
-          if(res.body.css != '.box{font-size:24px}') throw new Error('expected ".box{font-size:24px}", got "' + res.body.css + '"');
+          if(res.body.css.trim() != '.box{font-size:24px}') throw new Error('expected ".box{font-size:24px}", got "' + res.body.css + '"');
         })
         .expect(200, done);
+    });
+
+    describe('When an error occurs', function() {
+      it('responds with a JSON object containing the error message in place of the compiled CSS', function(done) {
+        request(app)
+          .post('/compile')
+          .send({
+            input: "$size: 12px * 2;\n\n.box {\n  font-size: $size;\n", 
+            syntax: 'scss', 
+            output_style: 'compressed'
+          })
+          .set('Content-Type', 'application/json')
+          .expect('Content-Type', /json/)
+          .expect(function(res) {
+            if(res.body.css.trim() != 'invalid property name on line 4 at column 19') throw new Error('expected "invalid property name on line 4 at column 19", got "' + res.body.css + '"');
+          })
+          .expect(500, done);
+      });
     });
   });
 });
