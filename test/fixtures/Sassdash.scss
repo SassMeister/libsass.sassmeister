@@ -1,0 +1,11 @@
+@import "sassdash";
+
+$maps: (
+  ('name': 'barney', 'age': 36),
+  ('name': 'fred', 'age': 40)
+);
+
+.test {
+  debug: _pluck($maps, 'name'); // ('barney', 'fred')
+}
+

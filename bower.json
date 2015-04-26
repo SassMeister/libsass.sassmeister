@@ -34,6 +34,7 @@
     "jeet": "~6.1.2",
     "color-me-sass": "RichardBray/color-me-sass",
     "include-media": "~1.1.2",
-    "susy": "~2.2.2"
+    "susy": "~2.2.2",
+    "sassdash": "https://github.com/davidkpiano/sassdash.git"    
   }
 }

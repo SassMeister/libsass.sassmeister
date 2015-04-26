@@ -156,6 +156,16 @@
       "sass-color-helpers/stylesheets"
     ]
   },
+  "Sassdash": {
+    "bower": "sassdash",
+    "fingerprint": "sassdash",
+    "imports": [
+      "sassdash"
+    ],
+    "paths": [
+      "sassdash/scss"
+    ]
+  },
   "Susy": {
     "bower": "susy",
     "fingerprint": "susy",
