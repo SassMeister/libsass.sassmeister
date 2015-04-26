@@ -18,7 +18,7 @@
     ]
   },
   "Breakpoint": {
-    "bower": "breakpoint",
+    "bower": "at-import/breakpoint",
     "fingerprint": "breakpoint",
     "imports": [
       "breakpoint"
@@ -157,7 +157,7 @@
     ]
   },
   "Sassdash": {
-    "bower": "sassdash",
+    "bower": "davidkpiano/sassdash",
     "fingerprint": "sassdash",
     "imports": [
       "sassdash"

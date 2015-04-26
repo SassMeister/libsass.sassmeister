@@ -26,15 +26,15 @@
     "sass-list-maps": "~1.0.0",
     "garnish": "~0.2.1",
     "sass2scss": "ArnaudRinquin/sass2scss",
-    "breakpoint": "https://github.com/at-import/breakpoint.git",
     "sass-toolkit": "~2.6.0",
-    "singularity": "~1.4.0",
+    "singularity": "~1.6.2",
     "juice": "~1.0.0",
     "box": "~0.1.2",
     "jeet": "~6.1.2",
     "color-me-sass": "RichardBray/color-me-sass",
     "include-media": "~1.1.2",
     "susy": "~2.2.2",
-    "sassdash": "https://github.com/davidkpiano/sassdash.git"    
+    "sassdash": "davidkpiano/sassdash#~0.4.2",
+    "compass-breakpoint": "at-import/breakpoint#~2.5.0"
   }
 }
