@@ -97,7 +97,6 @@ app.get('/extensions', function(req, res) {
   res.sendFile('extensions.json', {root: __dirname + '/../public/', maxAge: MAX_AGE});
 });
 
-
 // Heroku defines the port in an environment variable.
 // Our app should use that if defined, but we should provide a default.
 app.port = process.env.PORT || 1337;
