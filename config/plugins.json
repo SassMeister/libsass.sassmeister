@@ -77,16 +77,6 @@
       "guff"
     ]
   },
-  "include-media": {
-    "bower": "include-media",
-    "fingerprint": "include-media",
-    "imports": [
-      "include-media"
-    ],
-    "paths": [
-      "include-media/dist"
-    ]
-  },
   "Jeet": {
     "bower": "jeet",
     "fingerprint": "jeet",
