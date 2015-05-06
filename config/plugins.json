@@ -23,9 +23,7 @@
     "imports": [
       "breakpoint"
     ],
-    "paths": [
-      "breakpoint/stylesheets"
-    ]
+    "paths": []
   },
   "ColorMeSass": {
     "bower": "RichardBray/color-me-sass",
