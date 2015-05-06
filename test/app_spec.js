@@ -32,8 +32,8 @@ describe('Routes', function() {
       request(app)
         .post('/compile')
         .send({
-          input: "$size: 12px * 2;\n\n.box {\n  font-size: $size;\n}", 
-          syntax: 'scss', 
+          input: "$size: 12px * 2;\n\n.box {\n  font-size: $size;\n}",
+          syntax: 'scss',
           output_style: 'compressed'
         })
         .set('Content-Type', 'application/json')
@@ -49,8 +49,8 @@ describe('Routes', function() {
         request(app)
           .post('/compile')
           .send({
-            input: "$size: 12px * 2;\n\n.box {\n  font-size: $size;\n", 
-            syntax: 'scss', 
+            input: "$size: 12px * 2;\n\n.box {\n  font-size: $size;\n",
+            syntax: 'scss',
             output_style: 'compressed'
           })
           .set('Content-Type', 'application/json')
@@ -80,8 +80,8 @@ describe('Extensions', function() {
         request(app)
           .post('/compile')
           .send({
-            input: fixture, 
-            syntax: 'scss', 
+            input: fixture,
+            syntax: 'scss',
             output_style: 'compressed'
           })
           .set('Content-Type', 'application/json')
