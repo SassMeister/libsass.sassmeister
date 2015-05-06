@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "bourbon": "~4.0.2",
+    "bourbon": "~4.2.2",
     "compass-mixins": "~1.0.2",
     "foundation": "~5.4.7",
     "guff": "~1.0.1",
