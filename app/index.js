@@ -92,7 +92,6 @@ app.post('/compile', function(req, res) {
   });
 });
 
-
 app.get('/extensions', function(req, res) {
   res.sendFile('extensions.json', {root: __dirname + '/../public/', maxAge: MAX_AGE});
 });
