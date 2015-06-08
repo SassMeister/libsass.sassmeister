@@ -144,6 +144,16 @@
     ],
     "paths": []
   },
+  "Quantity Queries": {
+    "bower": "danielguillan/quantity-queries",
+    "fingerprint": "quantity-queries",
+    "imports": [
+      "quantity-queries"
+    ],
+    "paths": [
+      "quantity-queries/stylesheets"
+    ]
+  },
   "Rocket": {
     "bower": "rocket",
     "fingerprint": "rocket",

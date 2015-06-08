@@ -1,0 +1,18 @@
+@import 'quantity-queries';
+
+ul > li {
+  // Color the `li` items red when there are 6 items or more
+  @include at-least(6) {
+    color: red;
+  }
+
+  // Color the `li` items blue when there are 4 items or less
+  @include at-most(4) {
+    color: blue;
+  }
+
+  // Add a green background to `li` items when there are between 5 and 8 items
+  @include between(5, 8) {
+    background-color: green;
+  }
+}
