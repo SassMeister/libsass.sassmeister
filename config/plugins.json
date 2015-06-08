@@ -174,6 +174,16 @@
       "sass-list-maps"
     ]
   },
+  "sass-maps-plus": {
+    "bower": "lunelson/sass-maps-plus",
+    "fingerprint": "sass-maps-plus",
+    "imports": [
+      "sass-maps-plus"
+    ],
+    "paths": [
+      "sass-maps-plus"
+    ]
+  },
   "Sassdash": {
     "bower": "davidkpiano/sassdash",
     "fingerprint": "sassdash",
