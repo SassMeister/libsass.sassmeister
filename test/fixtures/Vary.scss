@@ -1,0 +1,21 @@
+@import 'vary';
+
+$vary-map: (
+  user: (
+    'color-primary': blue,
+    'border': '1px solid #ff0'
+  ),
+  admin: (
+    'color-primary': pink,
+    'border': '10px solid black'
+  )
+);
+
+.foo{
+	background: red;
+
+	@include vary($create: parent) {
+		background: vary-get('color-primary');
+		border: vary-get('border');
+	}
+}

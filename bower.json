@@ -36,6 +36,7 @@
     "sassdash": "davidkpiano/sassdash#~0.4.2",
     "compass-breakpoint": "at-import/breakpoint#~2.6.1",
     "true": "~2.0.1",
-    "include-media": "1.3.0"
+    "include-media": "1.3.0",
+    "sass-vary": "*"
   }
 }
