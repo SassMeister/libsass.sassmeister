@@ -144,6 +144,16 @@
     ],
     "paths": []
   },
+  "Rocket": {
+    "bower": "rocket",
+    "fingerprint": "rocket",
+    "imports": [
+      "rocket"
+    ],
+    "paths": [
+      "rocket/src/scss"  
+    ]
+  },
   "Sass Color Helpers": {
     "bower": "sass-color-helpers",
     "fingerprint": "color-helpers",

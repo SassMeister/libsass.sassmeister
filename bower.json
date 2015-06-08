@@ -38,6 +38,7 @@
     "true": "~2.0.1",
     "include-media": "1.3.0",
     "sass-vary": "*",
-    "gridle": "~1.3.38"
+    "gridle": "~1.3.38",
+    "rocket": "~2.0.0"
   }
 }
