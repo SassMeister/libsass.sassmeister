@@ -65,6 +65,16 @@
       "garnish/src"
     ]
   },
+  "Gridle": {
+    "bower": "gridle",
+    "fingerprint": "gridle/gridle",
+    "imports": [
+      "gridle/gridle"
+    ],
+    "paths": [
+      "gridle/sass"
+    ]  
+  },
   "Guff": {
     "bower": "guff",
     "fingerprint": "guff",
