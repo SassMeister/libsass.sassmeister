@@ -224,6 +224,16 @@
       "sassdash/scss"
     ]
   },
+  "Sassy-validation": {
+    "bower": "sassy-validation",
+    "fingerprint": "sassy-validation",
+    "imports": [
+      "sassy-validation"
+    ],
+    "paths": [
+      "sassy-validation/stylesheets"  
+    ]
+  },
   "Singularity.gs": {
     "bower": "singularity",
     "fingerprint": "singularity",

@@ -1,0 +1,13 @@
+@import "sassy-validation";
+
+.test {
+  test: validate(1em, measure);                  // returns true
+  test: validate(13, measure);                   // returns false
+  test: validate(77, number);                    // returns true
+  test: validate('77', number);                  // returns false
+  test: validate('sassy-validation', string);    // returns true
+  test: validate(1.618, float);                  // returns true
+  test: validate(1 2 3 4 5, list);               // returns true
+  test: validate(-99999, negative);              // returns true
+  test: validate(px, unit);                      // returns true
+}
