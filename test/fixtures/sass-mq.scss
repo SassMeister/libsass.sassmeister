@@ -1,0 +1,21 @@
+@import 'mq';
+
+.responsive {
+    // Apply styling to mobile and upwards
+    @include mq($from: mobile) {
+        color: red;
+    }
+    // Apply styling up to devices smaller than tablets (exclude tablets)
+    @include mq($until: tablet) {
+        color: blue;
+    }
+    // Same thing, in landscape orientation
+    @include mq($until: tablet, $and: '(orientation: landscape)') {
+        color: hotpink;
+    }
+    // Apply styling to tablets up to desktop (exclude desktop)
+    @include mq(tablet, desktop) {
+        color: green;
+    }
+}
+

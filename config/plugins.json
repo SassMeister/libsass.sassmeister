@@ -204,6 +204,16 @@
       "sass-maps-plus"
     ]
   },
+  "sass-mq": {
+    "bower": "sass-mq",
+    "fingerprint": "mq",
+    "imports": [
+      "mq"
+    ],
+    "paths": [
+      "sass-mq"
+    ]
+  },
   "Sassdash": {
     "bower": "davidkpiano/sassdash",
     "fingerprint": "sassdash",
