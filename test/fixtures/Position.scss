@@ -1,0 +1,9 @@
+@import 'position';
+
+.Example-without-value {
+  @include absolute(top left);
+}
+
+.Example-with-value {
+  @include absolute(top 1rem left 2rem);
+}

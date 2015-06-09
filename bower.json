@@ -41,6 +41,7 @@
     "gridle": "~1.3.38",
     "rocket": "~2.0.0",
     "sass-maps-plus": "lunelson/sass-maps-plus",
-    "quantity-queries": "danielguillan/quantity-queries"
+    "quantity-queries": "danielguillan/quantity-queries",
+    "position": "~0.2.15"
   }
 }

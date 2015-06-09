@@ -144,6 +144,16 @@
     ],
     "paths": []
   },
+  "Position": {
+    "bower": "position",
+    "fingerprint": "position",
+    "imports": [
+      "position"
+    ],
+    "paths": [
+      "position/sass"
+    ]
+  },
   "Quantity Queries": {
     "bower": "danielguillan/quantity-queries",
     "fingerprint": "quantity-queries",
