@@ -19,7 +19,7 @@ $gutters: 1/3;
 }
 
 #baz {
-  @include grid-span(2, 3, (2 8 2 1), .25, 'right');
+  @include grid-span(2, 3, (2 8 2 1), .25);
 }
 #baz {
   @include isolation-span(2, 3, 'right', (2 8 2 1), .25);
