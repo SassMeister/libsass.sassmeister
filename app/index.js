@@ -40,7 +40,7 @@ var setIncludePaths = function(imports) {
   }
 
   paths = paths.filter(function (v, i, a) { return a.indexOf (v) == i }); // dedupe array
-  
+
   return paths;
 };
 
@@ -88,7 +88,7 @@ app.post('/compile', function(req, res) {
         dependencies: { 'libsass': LIBSASS_VERSION },
         stats: result.stats.duration / 1000,
         time: result.stats.duration / 1000
-      });      
+      });
     }
   });
 });
