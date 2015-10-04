@@ -86,10 +86,15 @@ describe('Extensions', function() {
           })
           .set('Content-Type', 'application/json')
           .expect('Content-Type', /json/)
-          .expect(function(res) {
-            if(! valid(res.body.css)) throw new Error('Invalid CSS: ' + res.body.css);
-          })
-          .expect(200, done);
+          .expect(200)
+          .end(function(x, res) {
+            if(res.body.error || ! valid(res.body.css)) {
+              console.log(res.body.error);
+              return done(new Error('Invalid CSS: ' + res.body.css));
+            }
+            
+            return done();
+          });
       });
     });
   });

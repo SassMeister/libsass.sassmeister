@@ -78,7 +78,8 @@ app.post('/compile', function(req, res) {
   }, function(error, result) {
     if (error) {
       return res.status(500).json({
-        css: error.message + ' on line ' + error.line + ' at column ' + error.column
+        css: error.message + ' on line ' + error.line + ' at column ' + error.column,
+        error: error
       });
     }
     else {
