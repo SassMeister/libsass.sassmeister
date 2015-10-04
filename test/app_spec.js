@@ -56,7 +56,7 @@ describe('Routes', function() {
           .set('Content-Type', 'application/json')
           .expect('Content-Type', /json/)
           .expect(function(res) {
-            if(res.body.css.trim() != 'invalid property name on line 4 at column 19') throw new Error('expected "invalid property name on line 4 at column 19", got "' + res.body.css + '"');
+            if(res.body.css.trim() != 'Invalid CSS after "...nt-size: $size;": expected "}", was "" on line 4 at column 20') throw new Error('expected "Invalid CSS after "...nt-size: $size;": expected "}", was "" on line 4 at column 20", got "' + res.body.css + '"');
           })
           .expect(500, done);
       });
