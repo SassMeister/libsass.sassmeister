@@ -34,7 +34,7 @@ function bowerListAndInstall() {
 }
 
 function writeExtensionsJSON() {
-  var extensions = sassModules,
+  var extensions = {},
       length = _.size(sassModules),
       i = 0;
 
@@ -56,10 +56,6 @@ function writeExtensionsJSON() {
 }
 
 function fixturePreflightCheck() {
-  var extensions = sassModules,
-      length = _.size(sassModules),
-      i = 0;
-
   _.each(sassModules, function(extension, key) {
     var fixture = 'test/fixtures/' + key + '.scss',
         exists = fs.existsSync(fixture);
@@ -115,12 +111,8 @@ gulp.task('update', function() {
   return;
 });
 
-gulp.task('default', function() {
+gulp.task('default', ['update'], function() {
   var mocha = require('gulp-mocha');
-
-  bowerListAndInstall();
-
-  writeExtensionsJSON();
 
   fixturePreflightCheck();
 
