@@ -21,7 +21,7 @@
     "gulp-exit": "0.0.2",
     "lodash": "^2.4.1",
     "newrelic": "^1.13.3",
-    "node-sass": "^v3.4.0-beta1",
+    "node-sass": "^4.1.1",
     "redis": "^0.12.1"
   },
   "devDependencies": {
